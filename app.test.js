@@ -1,4 +1,5 @@
 import {capitalize, reverseString, calculator, caeserCipher, analyzeArray} from "./app";
+import {testF} from "./sandbox";
 
 test("capitalize string", () => {
     expect(capitalize("mike")).toBe("Mike")
@@ -41,5 +42,8 @@ test("analyze the array", () => {
     })
 })
 
-
+test("async treasury api test for name", async () => {
+   const data = await testF();
+   expect(data.dataset.name).toBe("Treasury Yield Curve Rates")
+})
 
